@@ -1,0 +1,89 @@
+Problem Statement
+Report An Issue
+You are expecting a very important guest and you want to prepare ‘K’ different types of sweets for them. Each sweet should be of the same size and as large as possible.
+
+
+To make a sweet, you need a specific ingredient. If you want to make the ‘ith’ sweet of size ‘Z’ and you have the ‘ith’ ingredient of size ‘P’, then you will need ‘ceil(Z / P)’ amount of the ‘ith’ ingredient. Note that an ingredient for one type of sweet cannot be used for another type.
+
+
+You have an array ‘A’ of length ‘N * K’, where A[i][j] indicates that ‘shop A[i]’ sells the ‘jth’ ingredient of size ‘A[i][j]’. You can only buy whole amounts of ingredients from any shop.
+
+
+However, due to time constraints, you can only visit exactly ‘2’ shops. You can buy any amount of any type of ingredient from these two shops. Each ingredient, regardless of type or shop, costs ‘1’ rupee. Also, you only have ‘S’ rupees to spend.
+
+
+Your goal is to find the maximum possible size for all the sweets you can make with your budget.
+
+
+Example:
+'N' = 3
+'K' = 3
+'S' = 10
+'A' = [[2, 5, 10], [9, 4, 1], [6, 8, 3]]
+By selecting shops ‘1’ and ‘3’, you can achieve a maximum sweet size of ‘24’. Here’s the breakdown:
+
+For the third ingredient, you go to shop ‘1’. The cost to make a sweet of size ‘24’ is ceil(24/10), which equals ‘3’.
+For the first and second ingredients, you go to shop ‘3’. The cost to make sweets of size ‘24’ is ceil(24/6) and ceil(24/8), which equals ‘4’ and ‘3’ respectively.
+So, the total cost is 3 (for the third ingredient) + 4 (for the first ingredient) + 3 (for the second ingredient), which equals ‘10’. This is less than your budget ‘S’. 
+It can be proven that it’s impossible to create sweets of a size larger than ‘24’ with the given constraints.
+
+Therefore, the maximum possible size for all the sweets you can make is indeed ‘24’.
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+1 <= 'T' <= 10
+3 <= 'N' <= 10^5
+2 <= 'K' <= 7
+1 <= A[i][j] <= 10^5
+1 <= S <= 10^9
+Sum of 'N' over all test cases doesn't exceed 10^5.
+
+Time Limit: 1 sec 
+Sample Input 1:
+2
+6 3 13
+3 5 3
+3 3 1
+4 4 1
+2 4 54 5
+4 3 3
+1 2 1
+5 2 13
+3 5
+5 2
+3 1
+2 2
+4 2
+Sample Output 1:
+16
+30
+Explanation Of Sample Input 1:
+For test case 1:
+If we consider shop '4' and '5', and take 1st ingredient from shop '5' and other two from shop '4', then it is possible to make all sweets of size '16' with cost < 13.
+
+For test case 2:
+If we consider shop '1' and '2' and take 1st ingredient from shop '1' and 2nd ingredient from shop '2', then it is possible to make all sweets of size '30' with cost < 13.
+Sample Input 2:
+2
+4 2 19
+4 5
+4 5
+2 2
+4 5
+6 3 20
+5 4 1
+4 5 4
+5 2 4
+5 3 2
+5 1 5
+3 1 2
+Sample Output 2 :
+40
+30
+
+
+
+
+Autocomplete
+
+long long maximumSizeOfSweets(int n, int k, int s, vector<vector<int>>& a) { // Write Your Code Here. }
+Console
