@@ -1,0 +1,47 @@
+Problem Statement
+Report An Issue
+Freqsequence is a word developed by Ninja. The meaning of the word is the longest subsequence of the given string, which has characters with the highest frequency.
+
+
+A subsequence is a sequence that can be derived from the given sequence by deleting zero or more elements without changing the order of the remaining elements.
+
+
+You are given a string 'S'. Find freqsequence of the given string.
+
+
+Example:
+'S' = "wowow"
+
+Here, the frequency of the character 'w' is '3', and the frequency of the character 'o' is '2'.
+So, the freqsequence of the given string is "www".
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= T <= 10
+1 <= |S| <= 10^5, |S| denote the length of the string 'S'.
+
+Time Limit: 1 sec
+Sample Input 1:
+2
+aabbcc
+aaabbcc
+Sample Output 1:
+aabbcc
+aaa
+Explanation Of Sample Input 1:
+For test case 1:
+Here, the frequency of the character 'a' is '2', the frequency of the character 'b' is '2', and the frequency of the character 'c' is '2'.
+So, the characters with the highest frequency are 'a', 'b', and 'c'.
+So, the freqsequence of the given string is "aabbcc".
+
+
+For test case 2:
+Here, the frequency of the character 'a' is '3', the frequency of the character 'b' is '2', and the frequency of the character 'c' is '2'.
+So, the character with the highest frequency is 'a'.
+So, the freqsequence of the given string is "aaa".
+Sample Input 2:
+2
+iaeeufsseses
+abcdabcdddcba
+Sample Output 2:
+eesseses
+dddd

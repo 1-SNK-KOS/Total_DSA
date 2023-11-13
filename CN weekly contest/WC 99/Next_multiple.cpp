@@ -1,8 +1,18 @@
-#include<bits/stdc++.h>
-using namespace std;
+int nextMultiple(int n, int m) {
 
-int main()
-{
+    // Write your code here.
+   /* int start = n/m;
+    if(start == 0) start = 1;
+     int ans = 1;
 
-return 0 ;
+    while(1){
+      ans = m*start;
+      if(ans>=n) return ans;
+      start++;
+    }
+    */
+    //  return (n/m + 1)*m;
+    // return n + (m-n%m);
+    
+
 }

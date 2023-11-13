@@ -1,0 +1,81 @@
+Problem Statement
+Report An Issue
+You are given an array 'A' of length 'N' consisting of strings of lowercase letters. You are also given an array 'B' of length 'M' consisting of strings of lowercase letters. For each string in the array 'B', your task is to find how many strings in the array 'A' are anagrams of this string.
+
+
+Your task is to return an array of length 'M' consisting of numbers as described above.
+
+
+Note: An anagram is any string that can be formed by rearranging the letters of a string.
+
+
+Example:
+'N' = 4
+'M' = 2
+'A' = ["dpees", "sarc", "cars", "dd"]
+'B' = ["casr", "a"]
+
+For the 1st string ("casr"), the anagrams present in the array 'A' are, "sarc" and "cars". Hence, the answer for this string is '2'.
+
+For the 2nd string ("a"), no anagram is present in the array 'A'. Hence, the answer for this string is '0'.
+
+Therefore, the answer is [2, 0].
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+1 <= 'T' <= 10
+1 <= 'N' <= 10^3
+1 <= 'M' <= 10^3
+1 <= length of (A[i]), length of (B[j]) <= 100 for all valid i, j
+All strings consist of lowercase letters only
+
+Time Limit: 1 sec 
+Sample Input 1:
+2
+5 2
+hsqd
+qdsh
+qshd
+hsir
+ogx
+qsdh
+aa
+3 2
+hjdf
+ga
+ga
+dhfj
+ga
+Sample Output 1:
+3 0
+1 2
+Explanation Of Sample Input 1:
+For test case 1:
+For string "qsdh", the anagrams present are strings at index '0', '1' and '2' of the array 'A'. For string "aa", there are no anagrams present. Hence, the answer is [3, 0].
+
+For test case 2:
+For string "dhfg", the anagram present is the string at index '0' of the array 'A'. For the string "ga", the anagrams present are strings at the index '1' and '2'. Hence, the answer is [1, 2].
+Sample Input 2:
+2
+4 2
+lpz
+ehdzl
+vwoe
+eq
+lezhd
+eq
+5 3
+svc
+byvq
+scv
+vsc
+myoq
+qvby
+ybvq
+qlgsq
+Sample Output 2 :
+1 1
+1 1 0
+
+
+
+

@@ -1,0 +1,90 @@
+Problem Statement
+Report An Issue
+
+
+Alice and Bob are playing with a grid 'A' made of integers with 'N' rows and 'M' columns.
+
+
+They are playing in the following way:
+They will choose some sub-rectangle of the grid 'A'.
+Both will start from the top-left corner of the chosen rectangle and they want to reach the bottom-right corner of the chosen rectangle.
+To do so, they will move only to the right and down in the grid.
+
+
+Also, their happiness is based on conditions:
+1. Alice will be happy if the sum of the integers on her path is even.
+2. Bob will be happy if the sum of the integers on his path is odd.
+Note that they don't need to use the same path.
+
+
+You are given 'Q' queries, which you have to answer.
+For each query, you will be given four integers 'W', 'X', 'Y', and 'Z' where ('W', 'X') represent the top-left corner and ('Y', 'Z') represent the bottom-right corner of the subrectangle chosen by Alice and Bob.
+
+
+Your task is to find out if both Alice and Bob can be happy for each independent query.
+
+
+Return the array of 'Q' integers with only '0' and '1', where '1' represents that both Alice and Bob can be happy and '0' otherwise.
+
+
+Example:
+N = 3
+M = 3
+Q = 2
+A = [[1, 2, 2], [4, 3, 1], [2, 4, 5]]
+Queries = [[0, 0, 1, 1], [0, 0, 2, 2]]
+Note that we are using '0' based indexing.
+
+For the first query, there are only two possible paths: (0, 0) -> (0, 1) -> (1, 1) and (0, 0) -> (1, 0) -> (1, 1). 
+The sum along both paths is even. So Bob cannot be happy.
+Thus, the answer for the first query is '0'.
+
+For the second query, Alice will follow the path (0, 0) -> (1, 0) -> (2, 0) -> (2, 1) -> (2, 2). 
+The sum along this path is '1 + 4 + 2 + 4 + 5' = '16', which is even. 
+Bob will follow the path (0, 0) -> (0, 1) -> (0, 2) -> (1, 2) -> (2, 2).
+The sum along this path is '1 + 2 + 2 + 1 + 5' = '11' which is odd.
+
+Both Alice and Bob are happy, so the answer to the second query is '1'.
+Hence, the overall answer for this case is [0, 1].
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints:
+2 <= 'N' <= 10^3
+2 <= 'M' <= 10^3
+1 <= 'Q' <= 10^5
+0 <= 'A[i][j]' <= '10^9'
+0 <= 'W' < 'Y' < 'N'
+0 <= 'X' < 'Z' < 'M'
+
+Time limit: 1 sec
+Sample Input 1:
+3 3 2
+2 2 2
+2 2 3
+2 3 3
+0 0 2 2
+0 0 1 2
+Sample Output 1:
+0
+0
+Explanation Of Sample Input 1:
+For the first query, all the possible paths from the cell ('0', '0') to the cell ('2', '2') have the same sum along the path equal to '12', which is even. So Bob cannot be happy.
+Hence, the answer for the first query is '0'.
+
+For the second query, all the possible paths from the cell ('0', '0') to the cell ('1', '2') have the sum along the path equal to '9', which is odd. So Alice cannot be happy.
+Hence, the answer for the first query is '0'.
+
+Therefore, the overall answer for this case is ['0', '0'].
+Sample Input 2:
+3 3 2
+2 2 5
+2 2 4
+2 3 3
+1 0 2 2
+1 0 2 1
+Sample Output 2:
+1
+0
+
+
+
+
